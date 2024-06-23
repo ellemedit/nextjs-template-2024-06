@@ -12,7 +12,8 @@
     "codegen:panda": "panda codegen",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test:browser": "vitest --browser=chrome --browser.headless"
+    "test:browser": "vitest --browser=chrome --browser.headless",
+    "bootstrap": "cp .env.example .env.development.local"
   },
   "lint-staged": {
     "*.{js,cjs,mjs,ts,mts,tsx,md,mdx,css,json,yaml,toml}": [
@@ -31,9 +32,16 @@
     ]
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@supabase/ssr": "^0.3.0",
+    "@supabase/supabase-js": "^2.43.5",
+    "@vercel/otel": "^1.8.4",
+    "client-only": "^0.0.1",
     "next": "^15.0.0-rc.0",
-    "react": "^19.0.0-rc-e684ca66ab-20240619",
-    "react-dom": "^19.0.0-rc-e684ca66ab-20240619"
+    "react": "^19.0.0-rc-3563387fe3-20240621",
+    "react-dom": "^19.0.0-rc-3563387fe3-20240621",
+    "server-only": "^0.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -48,13 +56,13 @@
     "@testing-library/react": "^16.0.0",
     "@total-typescript/ts-reset": "^0.5.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/browser": "^1.6.0",
     "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-51a85ea-20240601",
     "eslint-plugin-storybook": "^0.8.0",
